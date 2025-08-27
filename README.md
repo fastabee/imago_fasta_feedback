@@ -18,3 +18,33 @@ pw : fastabee@gmail.com
 
 email2: Wijaya@gmail.com
 pw : Wijaya
+
+
+# Dokumentasi
+
+## Tampilan Aplikasi
+
+### Halaman 1
+![Halaman 1](ss1.PNG)
+
+Tambahan ss  
+now  
+
+### Halaman 2
+![Halaman 2](ss2.PNG)
+
+Tambahan ss  
+now  
+
+### Halaman 3
+![Halaman 3](ss3.PNG)
+
+Tambahan ss  
+now  
+
+### Halaman 4
+![Halaman 4](ss4.PNG)
+
+Tambahan ss  
+now
+
