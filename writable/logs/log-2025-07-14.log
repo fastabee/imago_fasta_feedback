@@ -1,0 +1,121 @@
+ERROR - 2025-07-14 19:10:43 --> Error connecting to the database: mysqli_sql_exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in C:\xampp\htdocs\ci41\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\ci41\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('hackatonfasta-f...', 'avnadmin', Object(SensitiveParameterValue), 'hackaton_fasta', 3306, '', 0)
+#1 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ci41\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ci41\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ci41\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ci41\app\Models\ModelUser.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ci41\app\Controllers\Home.php(20): App\Models\ModelUser->getUser()
+#8 C:\xampp\htdocs\ci41\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#9 C:\xampp\htdocs\ci41\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp\htdocs\ci41\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ci41\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond in C:\xampp\htdocs\ci41\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ci41\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ci41\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ci41\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\ci41\app\Models\ModelUser.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\ci41\app\Controllers\Home.php(20): App\Models\ModelUser->getUser()
+#7 C:\xampp\htdocs\ci41\system\CodeIgniter.php(941): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\ci41\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\ci41\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ci41\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2025-07-14 19:10:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ModelUser.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Home.php(20): App\Models\ModelUser->getUser()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-14 19:11:04 --> Error: Class "CodeIgniter\Database\pgsql\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('pgsql', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Home->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-14 19:11:27 --> Error: Class "CodeIgniter\Database\pgsql\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('pgsql', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Home->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-14 19:14:35 --> Error: Class "CodeIgniter\Database\psql\Connection" not found
+in SYSTEMPATH\Database\Database.php on line 137.
+ 1 SYSTEMPATH\Database\Database.php(55): CodeIgniter\Database\Database->initDriver('psql', 'Connection', [...])
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(153): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Home->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-07-14 19:15:49 --> ParseError: syntax error, unexpected end of file
+in APPPATH\Views\welcome_message.php on line 3.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome_message', [], true)
+ 3 APPPATH\Controllers\Home.php(22): view('welcome_message', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2025-07-14 19:56:04 --> ErrorException: pg_query(): Query failed: ERROR:  table "kren" does not exist in C:\xampp\htdocs\ci41\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\ci41\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'DROP TABLE "kre...')
+#2 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('DROP TABLE "kre...')
+#3 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE "kre...')
+#4 C:\xampp\htdocs\ci41\system\Database\Forge.php(648): CodeIgniter\Database\BaseConnection->query('DROP TABLE "kre...')
+#5 C:\xampp\htdocs\ci41\app\Database\Migrations\2025-07-14-195231_KrenTabel.php(23): CodeIgniter\Database\Forge->dropTable('kren')
+#6 C:\xampp\htdocs\ci41\system\Database\MigrationRunner.php(865): App\Database\Migrations\KrenTabel->down()
+#7 C:\xampp\htdocs\ci41\system\Database\MigrationRunner.php(288): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#8 C:\xampp\htdocs\ci41\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#9 C:\xampp\htdocs\ci41\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#10 C:\xampp\htdocs\ci41\system\CLI\BaseCommand.php(115): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#11 C:\xampp\htdocs\ci41\system\Commands\Database\MigrateRefresh.php(84): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#12 C:\xampp\htdocs\ci41\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#13 C:\xampp\htdocs\ci41\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#14 C:\xampp\htdocs\ci41\spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
+ERROR - 2025-07-14 20:06:20 --> ErrorException: pg_query(): Query failed: ERROR:  invalid input syntax for type timestamp: "CURRENT_TIMESTAMP"
+LINE 6:  "created_at" TIMESTAMP DEFAULT 'CURRENT_TIMESTAMP' NULL,
+                                        ^ in C:\xampp\htdocs\ci41\system\Database\Postgre\Connection.php:187
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 187)
+#1 C:\xampp\htdocs\ci41\system\Database\Postgre\Connection.php(187): pg_query(Object(PgSql\Connection), 'CREATE TABLE "k...')
+#2 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(693): CodeIgniter\Database\Postgre\Connection->execute('CREATE TABLE "k...')
+#3 C:\xampp\htdocs\ci41\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE "k...')
+#4 C:\xampp\htdocs\ci41\system\Database\Forge.php(555): CodeIgniter\Database\BaseConnection->query('CREATE TABLE "k...')
+#5 C:\xampp\htdocs\ci41\app\Database\Migrations\2025-07-14-195231_KrenTabel.php(23): CodeIgniter\Database\Forge->createTable('kren')
+#6 C:\xampp\htdocs\ci41\system\Database\MigrationRunner.php(865): App\Database\Migrations\KrenTabel->up()
+#7 C:\xampp\htdocs\ci41\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#8 C:\xampp\htdocs\ci41\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 C:\xampp\htdocs\ci41\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\xampp\htdocs\ci41\system\CLI\BaseCommand.php(115): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\xampp\htdocs\ci41\system\Commands\Database\MigrateRefresh.php(85): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#12 C:\xampp\htdocs\ci41\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#13 C:\xampp\htdocs\ci41\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#14 C:\xampp\htdocs\ci41\spark(102): CodeIgniter\CLI\Console->run()
+#15 {main}
